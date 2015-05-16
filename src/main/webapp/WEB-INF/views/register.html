@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head data-th-fragment="header">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+	<link href="../../../resources/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" data-th-href="@{/resources/bower_components/bootstrap/dist/css/bootstrap.min.css}" />
+	
+    <!-- MetisMenu CSS -->
+    <link href="../../../resources/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet" data-th-href="@{/resources/bower_components/metisMenu/dist/metisMenu.min.css}"/>
+
+    <!-- Timeline CSS -->
+    <link href="../../../resources/dist/css/timeline.css" rel="stylesheet" data-th-href="@{/resources/dist/css/timeline.css}"/>
+
+    <!-- Custom CSS -->
+    <link href="../../../resources/dist/css/sb-admin-2.css" rel="stylesheet" data-th-href="@{/resources/dist/css/sb-admin-2.css}"/>
+
+    <!-- Morris Charts CSS -->
+    <link href="../../../resources/bower_components/morrisjs/morris.css" rel="stylesheet" data-th-href="@{/resources/bower_components/morrisjs/morris.css}"/>
+
+    <!-- Custom Fonts -->
+    <link href="../../../resources/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" data-th-href="@{/resources/bower_components/font-awesome/css/font-awesome.min.css}"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<h4 class="header yellow lighter bigger">
+		Already open account with Trimegah? 
+	</h4>
+	<a href="https://www.itrimegah.com/page/register.jsp?e=Y" class="width-75 pull-left btn btn-small btn-warning" style="color:#000">
+		Create username now <i class="icon-arrow-right"></i>
+	</a>
+	
+	<h4 class="header yellow lighter bigger">
+		Free access to iTrimegah Portal and Research. 
+	</h4>
+	<a href="regfreetrial" class="width-75 pull-left btn btn-small btn-warning" style="color:#000">
+		Register for free trial <i class="icon-arrow-right"></i>
+	</a>
+	
+	<h4 class="header yellow lighter bigger">
+		Free access to iTrimegah Portal and Research. 
+	</h4>
+	<a href="#" class="width-75 pull-left btn btn-small btn-warning" style="color:#000" data-toggle="modal" data-target="#myModal">
+		Register for free trial <i class="icon-arrow-right"></i>
+	</a>
+	
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <form action="#" th:action="@{/register/registeradd}" method="post">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Registration</h4>
+      </div>
+      <div class="modal-body">
+		    	<input type="text"/>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" value="Submit" class="btn btn-default"/> <input type="reset" value="Close" class="btn btn-default" data-dismiss="modal"/>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+	
+	<script th:inline="javascript" type="text/javascript">
+	$(document).ready(function(){
+		$('#myModal').modal('show');
+	});
+	</script>
+	
+	
+    <!-- jQuery -->
+    <script src="../../../../resources/bower_components/jquery/dist/jquery.min.js"  data-th-src="@{/resources/bower_components/jquery/dist/jquery.min.js}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../../../resources/bower_components/bootstrap/dist/js/bootstrap.min.js" data-th-src="@{/resources/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../../../resources/bower_components/metisMenu/dist/metisMenu.min.js" data-th-src="@{/resources/bower_components/metisMenu/dist/metisMenu.min.js}"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="../../../../resources/bower_components/raphael/raphael-min.js" data-th-src="@{/resources/bower_components/raphael/raphael-min.js}"></script>
+    <script src="../../../../resources/bower_components/morrisjs/morris.min.js" data-th-src="@{/resources/bower_components/morrisjs/morris.min.js}"></script>
+    <script src="../../../../resources/js/morris-data.js" data-th-src="@{/resources/js/morris-data.js}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../../../../resources/dist/js/sb-admin-2.js" data-th-src="@{/resources/dist/js/sb-admin-2.js}"></script>
+
+
+</body>
+</html>
